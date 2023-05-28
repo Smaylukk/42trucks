@@ -4,12 +4,12 @@ import { ICar } from "../utils/utils";
 import CssBaseline from "@mui/material/CssBaseline";
 import { CustomAppBar } from "../components/AppBar";
 import { Header } from "../components/Header";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import { CardCar } from "../components/CardCar";
 import { Footer } from "../components/Footer";
+import { CarAlbum } from "../components/CarAlbum";
+import Head from "next/head";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(true);
   const themeToggle = () => {
     setDarkMode((prev) => !prev);
@@ -32,6 +32,7 @@ export default function Home() {
           throw new Error(response.statusText);
         }
         response.json().then((data) => {
+          setLoading(false);
           setCars(data);
         });
         // setResponse(data);}
@@ -42,19 +43,16 @@ export default function Home() {
   }, []);
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>42 тачки на ЗСУ</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
       <CssBaseline />
       <CustomAppBar themeChanger={themeToggle} useDark={darkMode} />
       <main>
-        {/* Hero unit */}
         <Header />
-        <Container sx={{ py: 2 }} maxWidth="lg">
-          {/* End hero unit */}
-          <Grid container spacing={2}>
-            {cars.map((car) => (
-              <CardCar key={car.number} car={car} />
-            ))}
-          </Grid>
-        </Container>
+        <CarAlbum loading={loading} cars={cars} />
       </main>
       <Footer />
     </ThemeProvider>

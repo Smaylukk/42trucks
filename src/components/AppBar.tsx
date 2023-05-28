@@ -23,7 +23,7 @@ export const CustomAppBar = (props: IAppBarProps) => {
         </Typography>
         <FormControlLabel
           labelPlacement="end"
-          label={props.useDark ? "Світла тема" : "Темна тема"}
+          label="Темна тема"
           control={<Switch checked={props.useDark} onChange={handleSwitch} />}
         />
       </Toolbar>

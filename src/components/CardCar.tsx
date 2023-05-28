@@ -17,7 +17,7 @@ export const CardCar: FC<{ car: ICar }> = ({ car }) => {
           flexDirection: "column",
         }}
       >
-        <CardMedia component="img" src={car.picture!} />
+        <CardMedia component="img" src={car.picture || "/assets/truck.jpg"} />
         <CardContent sx={{ flexGrow: 1 }}>
           <Typography gutterBottom variant="h5" component="h2">
             {car.number} - {car.name}

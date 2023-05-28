@@ -30,8 +30,8 @@
     "@types/google-spreadsheet": "^3.3.2"
   },
   "scripts": {
-    "start": "next dev",
-    "dev": "next start",
+    "start": "next start",
+    "dev": "next dev",
     "build": "next  build",
     "test": "next  test"
   }
