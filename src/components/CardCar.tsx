@@ -5,11 +5,11 @@ import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { FC } from "react";
-import { ICar, StatusColor } from "../utils";
+import { ICar, StatusColor } from "../utils/utils";
 
 export const CardCar: FC<{ car: ICar }> = ({ car }) => {
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} md={4} lg={3}>
       <Card
         sx={{
           height: "100%",
@@ -17,7 +17,7 @@ export const CardCar: FC<{ car: ICar }> = ({ car }) => {
           flexDirection: "column",
         }}
       >
-        <CardMedia component="img" src={car.picture} />
+        <CardMedia component="img" src={car.picture!} />
         <CardContent sx={{ flexGrow: 1 }}>
           <Typography gutterBottom variant="h5" component="h2">
             {car.number} - {car.name}
@@ -26,7 +26,7 @@ export const CardCar: FC<{ car: ICar }> = ({ car }) => {
             Статус авто:{" "}
             <span
               style={{
-                color: StatusColor.get(car.status),
+                color: StatusColor.get(car.status!),
                 fontWeight: "bolder",
               }}
             >

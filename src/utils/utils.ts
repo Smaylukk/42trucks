@@ -1,14 +1,14 @@
 export interface ICar {
-  number: string;
-  militaryBase: string;
-  picture: string;
-  name: string;
-  amountRepair: number;
-  amountTires: number;
-  amountDyeing: number;
-  addEquip: string;
-  status: CarStatus;
-  carName: string;
+  number: string | null;
+  militaryBase: string | null;
+  picture: string | null;
+  name: string | null;
+  amountRepair: number | null;
+  amountTires: number | null;
+  amountDyeing: number | null;
+  addEquip: string | null;
+  status: CarStatus | null;
+  carName: string | null;
 }
 
 export const enum CarStatus {
@@ -108,9 +108,8 @@ export const StatusColor = new Map<CarStatus, string>([
 ]);
 
 export const configApp = {
-  googleServiceAccount:
-    process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL || "",
-  googleSheetId: process.env.REACT_APP_GOOGLE_SHEET_ID || "",
-  googlePrivateKey: process.env.REACT_APP_GOOGLE_PRIVATE_KEY || "",
-  googleApiKey: process.env.REACT_APP_GOOGLE_API_KEY || "",
+  googleServiceAccount: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || "",
+  googleSheetId: process.env.GOOGLE_SHEET_ID || "",
+  googlePrivateKey: process.env.GOOGLE_PRIVATE_KEY || "",
+  googleApiKey: process.env.GOOGLE_API_KEY || "",
 };

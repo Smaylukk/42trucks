@@ -9,9 +9,7 @@ export const Header = () => {
   return (
     <Box
       sx={{
-        bgcolor: "background.paper",
         pt: 8,
-        pb: 6,
       }}
     >
       <Container maxWidth="md">
@@ -24,7 +22,7 @@ export const Header = () => {
           42 тачки на ЗСУ
         </Typography>
         <Stack
-          sx={{ pt: 4 }}
+          sx={{ pt: 1 }}
           direction="row"
           spacing={2}
           justifyContent="center"
