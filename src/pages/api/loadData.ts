@@ -8,10 +8,11 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    await doc.useServiceAccountAuth({
-      client_email: configApp.googleServiceAccount,
-      private_key: configApp.googlePrivateKey.replace(/\\n/gm, "\n"),
-    });
+    // await doc.useServiceAccountAuth({
+    //   client_email: configApp.googleServiceAccount,
+    //   private_key: configApp.googlePrivateKey.replace(/\\n/gm, "\n"),
+    // });
+    doc.useApiKey(configApp.googleApiKey);
 
     await doc.loadInfo();
     const sheet = doc.sheetsByIndex[0];

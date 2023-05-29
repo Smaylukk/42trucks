@@ -39,7 +39,7 @@ export const Header = () => {
             href="https://t.me/mouselab"
             target="_blank"
           >
-            Лабораторна миша
+            Антон Сененко
           </Button>
         </Stack>
       </Container>
