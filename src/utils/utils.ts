@@ -13,7 +13,7 @@ export interface ICar {
 
 export const enum CarStatus {
   find = "Пошук",
-  buy = "Купівля",
+  buy = "Знайшли",
   transport = "Перегон",
   repair = "Ремонт",
   done = "У військах",

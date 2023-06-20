@@ -84,7 +84,7 @@ export const CardCar: FC<{ car: ICar }> = ({ car }) => {
             </span>
           </Typography>
           <Typography>Додаткове обладнання:</Typography>
-          <Typography>{car.addEquip}</Typography>
+          <Typography className={"equip"}>{car.addEquip}</Typography>
         </CardContent>
       </Card>
     </Grid>
