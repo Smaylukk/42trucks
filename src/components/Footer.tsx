@@ -19,8 +19,8 @@ export const Footer = () => {
           Дякуємо, що рухаєте світ. Якщо хочете підтримати проєкт, реквізити
           тут:
           <br />
-          Картка Приват - 5168 7451 0561 4421 (Антон Сененко) <br />
-          PayPal - senenkoanton@gmail.com
+          Картка Приват - <b>5168 7451 0561 4421</b> (Антон Сененко) <br />
+          PayPal - <b>senenkoanton@gmail.com</b>
           <br />
           Детальні реквізити: <br />
           Установа банку - ПриватБанк
@@ -46,6 +46,9 @@ export const Footer = () => {
           PayPal: Oleg.boldyriev@gmail.com
           <br />
           Приват: 4149499371016518
+        </Typography>
+        <Typography variant="subtitle1" align="center" gutterBottom>
+          Powered by smaylukk
         </Typography>
       </Container>
     </Box>

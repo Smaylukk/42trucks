@@ -54,3 +54,6 @@ code {
   display: flex;
   justify-content: space-between;
 }
+.equip {
+  color: #16667d;
+}
