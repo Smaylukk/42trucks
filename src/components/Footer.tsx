@@ -52,7 +52,7 @@ export const Footer = () => {
           Приват: <b className={"Amount"}>4149499371016518</b>
         </Typography>
         <Typography variant="subtitle1" align="center" gutterBottom>
-          Powered by Holovachenko Dmytro
+          Розробка - Головаченко Дмитро
           <br />
           <a href="mailto:smaylukk@gmail.com" target="_top">
             smaylukk@gmail.com
