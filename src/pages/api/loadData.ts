@@ -58,7 +58,7 @@ const convertResult = (data: Array<Record<string, string>>) => {
     };
     newElement.number = dataElement["Номер"] ?? null;
     newElement.militaryBase = dataElement["Військова частина"] ?? null;
-    newElement.name = dataElement["Авто"] ?? null;
+    newElement.name = dataElement["Марка авто"] ?? null;
     newElement.carName = dataElement["Ім'я машини"] ?? null;
     newElement.amountTires = parseInt(dataElement["Шини"], 10) || 0;
     newElement.amountDyeing = parseInt(dataElement["Фарбування"], 10) || 0;

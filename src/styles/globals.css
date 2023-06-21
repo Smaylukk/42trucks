@@ -50,10 +50,19 @@ code {
   }
 }
 
-.CarInfo {
+.CarInfoAmount {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
-.equip {
+.CarInfo {
+  width: 100%;
+}
+.Amount {
   color: #16667d;
+}
+.CarInfoValue {
+  color: #16667d;
+  float: right;
+  width: 100%;
 }

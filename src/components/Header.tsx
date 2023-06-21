@@ -13,14 +13,6 @@ export const Header = () => {
       }}
     >
       <Container maxWidth="md">
-        <Typography
-          variant="h5"
-          align="center"
-          color="text.secondary"
-          paragraph
-        >
-          42 тачки на ЗСУ
-        </Typography>
         <Stack
           sx={{ pt: 1 }}
           direction="row"

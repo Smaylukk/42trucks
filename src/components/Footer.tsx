@@ -19,8 +19,10 @@ export const Footer = () => {
           Дякуємо, що рухаєте світ. Якщо хочете підтримати проєкт, реквізити
           тут:
           <br />
-          Картка Приват - <b>5168 7451 0561 4421</b> (Антон Сененко) <br />
-          PayPal - <b>senenkoanton@gmail.com</b>
+          Приват - <b className={"Amount"}>5168745105614421</b> (Антон Сененко)
+          <br />
+          PayPal - <b className={"Amount"}>senenkoanton@gmail.com</b>
+          <br />
           <br />
           Детальні реквізити: <br />
           Установа банку - ПриватБанк
@@ -34,21 +36,27 @@ export const Footer = () => {
           Валюта картки - UAH <br />
           РНОКПП отримувача - 3136215494
           <br />
-          Призначення платежу - Поповнення рахунку СЕНЕНКО АНТОН ІГОРОВИЧ,
-          безповоротна фінансова/благодійна допомога ЗСУ)
+          Призначення платежу -
+          <br />
+          Поповнення рахунку СЕНЕНКО АНТОН ІГОРОВИЧ, безповоротна
+          фінансова/благодійна допомога ЗСУ)
           <br />
           <br />
           Принагідно лишаю реквізити Мартин Брест, з яким ми разом реалізуємо
           проєкт:
           <br />
-          Моно: 4441114443028624
+          Моно: <b className={"Amount"}>4441114443028624</b>
           <br />
-          PayPal: Oleg.boldyriev@gmail.com
+          PayPal: <b className={"Amount"}>Oleg.boldyriev@gmail.com</b>
           <br />
-          Приват: 4149499371016518
+          Приват: <b className={"Amount"}>4149499371016518</b>
         </Typography>
         <Typography variant="subtitle1" align="center" gutterBottom>
-          Powered by smaylukk
+          Powered by Holovachenko Dmytro
+          <br />
+          <a href="mailto:smaylukk@gmail.com" target="_top">
+            smaylukk@gmail.com
+          </a>
         </Typography>
       </Container>
     </Box>

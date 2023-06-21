@@ -22,69 +22,54 @@ export const CardCar: FC<{ car: ICar }> = ({ car }) => {
           <Typography gutterBottom variant="h5" component="h2">
             {car.number} - {car.name}
           </Typography>
-          <Typography className="CarInfo">
+          <Typography className="CarInfoAmount">
             Статус авто:{" "}
             <span
               style={{
                 color: StatusColor.get(car.status!),
                 fontWeight: "bolder",
+                textAlign: "right",
               }}
             >
               {car.status}
             </span>
           </Typography>
-          <Typography className="CarInfo">
-            Війсьова частина:
-            <span
-              style={{
-                alignContent: "end",
-              }}
-            >
+          <Typography className={"CarInfoAmount"}>
+            В/ч:
+            <Typography className={"Amount"} align={"right"}>
               {car.militaryBase}
-            </span>
+            </Typography>
           </Typography>
-          <Typography className="CarInfo">
-            Ім'я машини:
-            <span
-              style={{
-                alignContent: "end",
-              }}
-            >
+          <Typography className={"CarInfoAmount"}>
+            Марка:
+            <Typography className={"Amount"} align={"right"}>
+              {car.name}
+            </Typography>
+          </Typography>
+          <Typography className={"CarInfoAmount"}>
+            Ім'я:
+            <Typography className={"Amount"} align={"right"}>
               {car.carName}
-            </span>
+            </Typography>
           </Typography>
-          <Typography className="CarInfo">
+          <Typography className={"CarInfoAmount"}>
             Ремонт:
-            <span
-              style={{
-                alignContent: "end",
-              }}
-            >
+            <Typography className={"Amount"} align={"right"}>
               {car.amountRepair || "0"} грн.
-            </span>
+            </Typography>
           </Typography>
-          <Typography className="CarInfo">
+          <Typography className="CarInfoAmount">
             Шини:
-            <span
-              style={{
-                alignContent: "end",
-              }}
-            >
-              {car.amountTires || "0"} грн.
-            </span>
+            <span className={"Amount"}>{car.amountTires || "0"} грн.</span>
           </Typography>
-          <Typography className="CarInfo">
+          <Typography className="CarInfoAmount">
             Фарбування:
-            <span
-              style={{
-                alignContent: "end",
-              }}
-            >
-              {car.amountDyeing || "0"} грн.
-            </span>
+            <span className={"Amount"}>{car.amountDyeing || "0"} грн.</span>
           </Typography>
           <Typography>Додаткове обладнання:</Typography>
-          <Typography className={"equip"}>{car.addEquip}</Typography>
+          <Typography className={"CarInfoValue"} align={"right"}>
+            {car.addEquip}
+          </Typography>
         </CardContent>
       </Card>
     </Grid>
