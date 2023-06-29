@@ -54,7 +54,11 @@ export const Footer = () => {
         <Typography variant="subtitle1" align="center" gutterBottom>
           Розробка - Головаченко Дмитро
           <br />
-          <a href="mailto:smaylukk@gmail.com" target="_top">
+          <a
+            href="mailto:smaylukk@gmail.com"
+            target="_top"
+            className={"Amount"}
+          >
             smaylukk@gmail.com
           </a>
         </Typography>

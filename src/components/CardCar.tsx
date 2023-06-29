@@ -24,7 +24,7 @@ export const CardCar: FC<{ car: ICar }> = ({ car }) => {
         />
         <CardContent sx={{ flexGrow: 1 }}>
           <Typography gutterBottom variant="h5" component="h2" align={"center"}>
-            {car.number}
+            {car.number} {car.carName || ""}
           </Typography>
           <Typography className="CarInfoAmount">
             Статус авто:{" "}
