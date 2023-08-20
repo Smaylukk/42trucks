@@ -52,7 +52,7 @@ export default function Home() {
       <CustomAppBar themeChanger={themeToggle} useDark={darkMode} />
       <main>
         <Header />
-        <CarAlbum loading={loading} cars={cars} />
+        <CarAlbum loading={loading} cars={cars} darkMode={darkMode} />
       </main>
       <Footer />
     </ThemeProvider>

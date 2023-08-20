@@ -1,12 +1,15 @@
 import React, { FC, useEffect, useState } from "react";
 import { CarStatus, ICar } from "../utils/utils";
 import { Pie } from "react-chartjs-2";
-import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
+import { ArcElement, Chart, Legend, Tooltip } from "chart.js";
 import Box from "@mui/material/Container";
 
 Chart.register(ArcElement, Tooltip, Legend);
 
-export const ChartCars: FC<{ cars: ICar[] }> = ({ cars }) => {
+export const ChartCars: FC<{ cars: ICar[]; darkMode: boolean }> = ({
+  cars,
+  darkMode,
+}) => {
   const [chartData, setChartData] = useState<number[]>([]);
 
   useEffect(() => {
@@ -59,6 +62,24 @@ export const ChartCars: FC<{ cars: ICar[] }> = ({ cars }) => {
           plugins: {
             legend: {
               position: "left",
+              display: true,
+              labels: {
+                generateLabels: (chart) => {
+                  const datasets = chart.data.datasets;
+                  return datasets[0].data.map((data, i) => ({
+                    text: `${
+                      (chart.data.labels && chart.data.labels[i]) ?? ""
+                    } ${data}`,
+                    fillStyle:
+                      (Array.isArray(datasets) &&
+                        Array.isArray(datasets[0].backgroundColor) &&
+                        datasets[0].backgroundColor[i]) ||
+                      null,
+                    fontColor: darkMode ? "rgb(255,255,255)" : "rgb(0,0,0)",
+                    index: i,
+                  }));
+                },
+              },
             },
           },
         }}
