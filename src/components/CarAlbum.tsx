@@ -14,10 +14,11 @@ import { CarStatus, ICar } from "../utils/utils";
 import Box from "@mui/material/Box";
 import { ChartCars } from "./ChartCars";
 
-export const CarAlbum: FC<{ loading: boolean; cars: ICar[] }> = ({
-  loading,
-  cars,
-}) => {
+export const CarAlbum: FC<{
+  loading: boolean;
+  cars: ICar[];
+  darkMode: boolean;
+}> = ({ loading, cars, darkMode }) => {
   const [statusFilter, setStatusFilter] = useState(0);
 
   const [fadeLoader, setFadeLoader] = useState(true);
@@ -71,7 +72,7 @@ export const CarAlbum: FC<{ loading: boolean; cars: ICar[] }> = ({
 
   return (
     <Fragment>
-      <ChartCars cars={cars} />
+      <ChartCars cars={cars} darkMode={darkMode} />
       <Container sx={{ py: 2 }} maxWidth="lg">
         <FormControl fullWidth sx={{ py: 2 }}>
           <InputLabel id="status-select-label">Показати зі статусом</InputLabel>
